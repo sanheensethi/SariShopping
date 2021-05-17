@@ -53,7 +53,10 @@ void extraWork :: print(string in,bool end=false){
 		else cout<<in;
 	}
 
-
+void extraWork :: print(string in,bool end=false){
+		if(end) cout<<in<<"\n";
+		else cout<<in;
+	}
 /* Classes */
 class Node{
 
@@ -116,6 +119,8 @@ public:
 	}
 };
 
+
+/*	Hash Code 	*/
 class HashCode{
 private:
 	string code;
@@ -123,7 +128,7 @@ public:
 	HashCode(string S){
 		long long int codeResult = 1;
 		for(int i=0;S[i]!='\0';i++){
-			codeResult *= ((((int)S[i] + 2) - 2)+1);
+			codeResult *= ((((int)S[i] + 2) - 3)+1);
 		}
 		this->code = to_string(codeResult);  
 	}
@@ -259,6 +264,7 @@ void SignUp(){
 	cout<<"**                                   **"<<endl;
 	cout<<"***************************************"<<endl;
 	cout<<"***************************************"<<endl;
+	
 	Form signup;
 	signup.input('n');
 	signup.input('e');
@@ -267,12 +273,13 @@ void SignUp(){
 	signup.input('m');
 	/*Signup Backend*/
 	cout<<signup.get('e');
-	DataBase db;
+	
 
 	string pass;
 	HashCode hash(signup.get('p'));
 	pass = hash.getPass();
 	// return - true -> print signup successfully
+	DataBase db;
 	db.insertData("data/authenticate.sr",signup.get('e')+ ' ' + pass);
 	db.insertData("data/name.sr",signup.get('n'));
 	db.insertData("data/dob_mobile.sr",signup.get('d')+ ' '+signup.get('m'));
@@ -286,7 +293,7 @@ void SignIn(){
 	cout<<"***************************************"<<endl;
 	cout<<"***************************************"<<endl;
 	cout<<"**                                   **"<<endl;
-	cout<<"**            SIGNUP                 **"<<endl;
+	cout<<"**            SIGNIN                 **"<<endl;
 	cout<<"**                                   **"<<endl;
 	cout<<"** CustomerCare: 18001800102         **"<<endl;
 	cout<<"**                                   **"<<endl;
