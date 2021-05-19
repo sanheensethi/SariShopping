@@ -1,0 +1,27 @@
+{
+  "name": "sarishopping",
+  "version": "1.0.0",
+  "description": "A small E-Commerce C++ Project",
+  "main": "SariShopping.cpp",
+  "directories": {
+    "example": "Order/,data/"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanheensethi/SariShopping.git"
+  },
+  "keywords": [
+    "PhpErrors",
+    "errors",
+    "errorstyles"
+  ],
+  "author": "Sanheen Sethi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sanheensethi/SariShopping/issues"
+  },
+  "homepage": "https://github.com/sanheensethi/SariShopping#readme"
+}
