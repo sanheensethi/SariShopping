@@ -37,6 +37,8 @@ class Database;
 class Material;
 class Cart;
 class CartNode;
+class Clothes;
+class ShoppingItems;
 
 /*Static Material Id Auto Increment*/
 static int _IDIncrementer = 376;
